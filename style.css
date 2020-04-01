@@ -1,59 +1,76 @@
 html,body{
     height: 100%;
     margin: 0;
+    padding : 0;
+    font-size : 1rem;
+    overflow: hidden;
 }
 
-.box{
-    height : 80%;
+.Main{
+    margin  : auto;
+    display : flex;
+    padding : 20px;
+    flex-flow : row;
+    width : 60%;
+    height : 100%;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.pair{
+    float : left;
+    width : 30%;
+    height: 28%;
+    margin: 15rem auto;
+}
+
+.tag{
+    display : flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+	width: 100%;
+	height: 100%;
+    box-shadow: 5px 8px 25px 5px rgb(143, 141, 141);
+    transition: transform 0.6s;
+    background : white;
+    text-align : center;
+} 
 
 .square{
-	width: 100%;
+    width: 100%;
 	height: 100%;
     transition: transform 0.6s,position 0.6s;
     position: relative;
     top: -100%;
 }
 
-.tag{
-	width: 100%;
-	height: 100%;
-    box-shadow: 5px 8px 25px 15px rgb(143, 141, 141,.7);
-    transition: transform 0.6s;
-    background : white;
-    text-align : center;
-} 
-
-
-.pair{
-    float : left;
-    width : 78%;
-    height: 28%;
-    /* margin-top : 15rem; */
-    margin: 15rem .2rem;
-    /* height: 0.2rem;  */
-}
 .icons{
     color: rgb(255, 255, 255);
-    font-size : 400%;
-    line-height : 100%;
-    /* margin: 30% 30%; */
-    /* align-content: center; */
-    /* justify-content: center; */
+    font-size : 3rem;
+    position : relative;
+    top : 40%;
+    left : 40%;
 }
 
-span{
-    text-align: center;
+.text{
+    /* text-align: center; */
     color: rgb(26, 25, 25);
-    font-size : 25px;
-    font-weight : bold;
+    font-size : 1.5rem;
     font-family : "Ubuntu";
+    font-weight: bold;
 }
 
-li{
-    list-style-type: none;
-    font-size: 18px;
+p{
+    font-size: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color : black;
+}
+
+a{
+    text-decoration: none;
+    color : black;
+    /* margin : 25% auto; */
 }
 
 #s1{
@@ -70,31 +87,30 @@ li{
 
 
 .a:hover .first_b{
-    transform: translateY(96px);
+    transform: translateY(50%);
     
 }
 
 .a:hover .first_a{
-    transform: translateY(-96px);
+    transform: translateY(-50%);
 }
 
 .b:hover .second_d{
-    transform: translateY(96px);
+    transform: translateY(50%)
 }
 
 .b:hover .second_c{
-    transform: translateY(-96px);
+    transform: translateY(-50%);
 }
 
 .c:hover .third_f{
-    transform: translateY(96px);
+    transform: translateY(50%);
 }
 
 .c:hover .third_e{
-    transform: translateY(-96px);
+    transform: translateY(-50%);
 }
  
-
 #text1:hover{
     color : #e07768;
 }
@@ -105,4 +121,26 @@ li{
 
 #text3:hover{
     color : #4aada9;
+}
+
+@media (max-width : 700px){
+    .Main{
+        width : 90%;
+        padding : 0;
+    }
+
+    .icons {
+        position: relative;
+        top : 40%;
+        left : 38%;
+        font-size : 2rem;
+    }
+
+    .text {
+        font-size: 68%;
+    }
+
+    p{
+        font-size: 80%;
+    }
 }
